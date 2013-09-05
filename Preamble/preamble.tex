@@ -3,31 +3,31 @@
 %%%% PACKAGES %%%%
 \usepackage{fourier}   %font
 % ¤¤ Oversættelse og tegnsætning ¤¤ %
-\usepackage[ansinew]{inputenc}					% Gør det muligt at bruge æ, ø og å i sine .tex-filer
+\usepackage[utf8]{inputenc}					% Gør det muligt at bruge æ, ø og å i sine .tex-filer
 \usepackage[danish]{babel}							% Dansk sporg, f.eks. tabel, figur og kapitel
 \usepackage[T1]{fontenc}								% Hjælper med orddeling ved æ, ø og å. Sætter fontene til at være ps-fonte, i stedet for bmp					
 \usepackage{latexsym}										% LaTeX symboler
 \usepackage{xcolor,ragged2e,fix-cm}			% Justering af elementer
-\usepackage{pdfpages}										% Gør det muligt at inkludere pdf-dokumenter med kommandoen \includepdf[pages=]{fil.pdf}	
-\pretolerance=2500 											% Gør det muligt at justre afstanden mellem ord (højt tal, mindre orddeling og mere space mellem ord)
-\usepackage{ulem}                       % Gennemstregning af ord med koden \sout{}
+%\usepackage{pdfpages}										% Gør det muligt at inkludere pdf-dokumenter med kommandoen \includepdf[pages=]{fil.pdf}	
+%\pretolerance=2500 											% Gør det muligt at justre afstanden mellem ord (højt tal, mindre orddeling og mere space mellem ord)
+%\usepackage{ulem}                       % Gennemstregning af ord med koden \sout{}
 																			
 % ¤¤ Figurer og tabeller – floats  ¤¤ %
-\usepackage{flafter}										% Sørger for at dine floats ikke optræder i teksten før de er sat ind.
-\usepackage{multirow}                		% Fletning af rækker
-\usepackage{hhline}                   	% Dobbelte horisontale linier
-\usepackage{multicol}         	        % Fletning af kolonner
-\usepackage{colortbl} 									% Muligøre farver i tabeller
-\usepackage{here}												% Gør det muligt at placere figurer hvor du vil.   \begin{figure}[!h] % Will not be floating.
-\usepackage{wrapfig}										% Indsættelse af figurer omsvøbt af tekst. \begin{wrapfigure}{Placering}{Størrelse}
-\usepackage{floatflt}										% Indsættelse af tabeller omsvøbt af tekst.
-\pdfoptionpdfminorversion=6							% Muliggør inkludering af pdf dokumenter, af version 1.6 og højere
-\usepackage{placeins}	
+%\usepackage{flafter}										% Sørger for at dine floats ikke optræder i teksten før de er sat ind.
+%\usepackage{multirow}                		% Fletning af rækker
+%\usepackage{hhline}                   	% Dobbelte horisontale linier
+%\usepackage{multicol}         	        % Fletning af kolonner
+%\usepackage{colortbl} 									% Muligøre farver i tabeller
+%\usepackage{here}												% Gør det muligt at placere figurer hvor du vil.   \begin{figure}[!h] % Will not be floating.
+%\usepackage{wrapfig}										% Indsættelse af figurer omsvøbt af tekst. \begin{wrapfigure}{Placering}{Størrelse}
+%\usepackage{floatflt}										% Indsættelse af tabeller omsvøbt af tekst.
+%\pdfoptionpdfminorversion=6							% Muliggør inkludering af pdf dokumenter, af version 1.6 og højere
+%\usepackage{placeins}	
 % ¤¤ Matematiske formler og maskinkode ¤¤
 \usepackage{amsmath,amssymb,stmaryrd} 	% Bedre matematik og ekstra fonte
-\usepackage{textcomp}                 	% Adgang til tekstsymboler
+%\usepackage{textcomp}                 	% Adgang til tekstsymboler
 \usepackage{mathtools}									% Udvidelse af amsmath-pakken.
-\usepackage{eso-pic}										% Tilføj billedekommandoer på hver side
+%\usepackage{eso-pic}										% Tilføj billedekommandoer på hver side
 %\usepackage{lipsum}											% Dummy text \lipsum[..]
 
 % ¤¤ PDF og billede optimering ¤¤ %
@@ -78,16 +78,16 @@
 \settocdepth{subsection} 								% Dybden af indholdsfortegnelsen
 
 % ¤¤ Visuelle referencer ¤¤ %
-\usepackage[colorlinks]{hyperref}			 	% Giver mulighed for at ens referencer bliver til klikbare hyperlinks. .. [colorlinks]{..}
-\hypersetup{pdfborder = 0}							% Fjerner ramme omkring links i fx indholsfotegnelsen og ved kildehenvisninger ¤¤
-\hypersetup{														%	Opsætning af hyperlinks
-    colorlinks = false,
-    linkcolor = black,
-    anchorcolor = black,
-    citecolor = black
-}
+% \usepackage[colorlinks]{hyperref}			 	% Giver mulighed for at ens referencer bliver til klikbare hyperlinks. .. [colorlinks]{..}
+% \hypersetup{pdfborder = 0}							% Fjerner ramme omkring links i fx indholsfotegnelsen og ved kildehenvisninger ¤¤
+% \hypersetup{														%	Opsætning af hyperlinks
+%     colorlinks = false,
+%     linkcolor = black,
+%     anchorcolor = black,
+%     citecolor = black
+% }
 
-\definecolor{gray}{gray}{0.80}					% Definerer farven grå
+% \definecolor{gray}{gray}{0.80}					% Definerer farven grå
 
 % ¤¤ Opsætning af figur- og tabeltekst ¤¤ %
  	\captionnamefont{
