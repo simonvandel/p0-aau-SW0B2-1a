@@ -1,6 +1,32 @@
 \chapter{Problemer} % (fold)
 \label{cha:problemer}
 
+\subsection{Vores interesse/krav} % (fold)
+\label{sub:vores_interesse_krav}
 
+For at opretholde en tilfredsstillende brugeroplevelse for forbrugeren, opstiller vi nogle grundlæggende krav til 3D-printerne vi understøtter.
+
+Da vores slutbrugere ikke forventes at kende til den tekniske del af 3D-printing, skal 3D-printerens hardware være så simpel som muligt. Dette matcher med vores overordnede mål, om at designe vores slutprodukt med filosofien KISS (Keep It Simple Stupid) i mente.
+
+\subsubsection{Hardware} % (fold)
+\label{ssub:hardware}
+
+3D-printerens ydre skal være så simpelt som muligt. Der skal altså kun være de mest basale funktioner tilgængelig for brugeren. Den eneste krævede knap er en ``stop'' knap, så brugeren kan stoppe en igangværende operation.
+
+% subsubsection hardware (end)
+
+\subsubsection{Software} % (fold)
+\label{ssub:software}
+
+Brugervenlighed er et vigtigt aspekt i vores løsning. Vi ønsker derfor at 3D-printerens software skal have mulighed for at forbinde sig til vores server. Dette ønskes af 2 grunde:
+
+\begin{itemize}
+	\item Ved en direkte kontakt mellem 3D-printer og vores server, undgår vi at brugerne skal installere 3D-printeren på deres PC, da serveren fodrer 3D-printeren direkte.
+	\item 3D-printeren kan selv ``melde'' dens printermuligheder til vores server. Dette sikrer en problemfri opsætning af 3D-printer på vores hjemmeside, da slutbrugeren nu ikke længere behøver at kende fabrikanten og modellen af 3D-printeren.
+\end{itemize}
+
+% subsubsection software (end)
+
+% subsection vores_interesse_krav (end)
 
 % chapter problemer (end)
