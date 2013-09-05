@@ -145,39 +145,39 @@
 
 \chapterstyle{jenor}
 
-% 中 Fjerner den vertikale afstand mellem listeopstillinger og punktopstillinger 中 %
-\let\olditemize=\itemize							
-\def\itemize{\olditemize\setlength{\itemsep}{-1ex}}
-\let\oldenumerate=\enumerate						
-\def\enumerate{\oldenumerate\setlength{\itemsep}{-1ex}}
+% % 中 Fjerner den vertikale afstand mellem listeopstillinger og punktopstillinger 中 %
+% \let\olditemize=\itemize							
+% \def\itemize{\olditemize\setlength{\itemsep}{-1ex}}
+% \let\oldenumerate=\enumerate						
+% \def\enumerate{\oldenumerate\setlength{\itemsep}{-1ex}}
 
 
 %%%% CUSTOM COMMANDS %%%%
 
-% 中 Billede hack 中 %
-\newcommand{\figur}[4]{
-		\begin{figure}[H] \centering
-			\includegraphics[width=#1\textwidth]{billeder/#2}
-			\caption{#3}\label{#4}
-		\end{figure}
-}
+% % 中 Billede hack 中 %
+% \newcommand{\figur}[4]{
+% 		\begin{figure}[H] \centering
+% 			\includegraphics[width=#1\textwidth]{billeder/#2}
+% 			\caption{#3}\label{#4}
+% 		\end{figure}
+% }
 
-% 中 Specielle tegn 中 %
-\newcommand{\celcius}{^{\circ}C}
-\newcommand{\gr}{^{\circ}}
-\newcommand{\g}{\cdot}
+% % 中 Specielle tegn 中 %
+% \newcommand{\celcius}{^{\circ}C}
+% \newcommand{\gr}{^{\circ}}
+% \newcommand{\g}{\cdot}
 
-% 中 Promille-hack (\promille) 中 %
-\newcommand{\promille}{%
-  \relax\ifmmode\promillezeichen
-        \else\leavevmode\(\mathsurround=0pt\promillezeichen\)\fi}
-\newcommand{\promillezeichen}{%
-  \kern-.05em%
-  \raise.5ex\hbox{\the\scriptfont0 0}%
-  \kern-.15em/\kern-.15em%
-  \lower.25ex\hbox{\the\scriptfont0 00}}
+% % 中 Promille-hack (\promille) 中 %
+% \newcommand{\promille}{%
+%   \relax\ifmmode\promillezeichen
+%         \else\leavevmode\(\mathsurround=0pt\promillezeichen\)\fi}
+% \newcommand{\promillezeichen}{%
+%   \kern-.05em%
+%   \raise.5ex\hbox{\the\scriptfont0 0}%
+%   \kern-.15em/\kern-.15em%
+%   \lower.25ex\hbox{\the\scriptfont0 00}}
 
 
-%%%% ORDDELING %%%%
+% %%%% ORDDELING %%%%
 
-\hyphenation{hvad hvem hvor MPa kon-se-kvens-klas-se bj熞-ken byg-ning-er e-le-ment brud-li-ni-er frem-l鷷s-tem-pe-ra-tur-en Bj熞-ker-ne ind-be-ret-tel-se be-hand-ler-en ana-ly-se stig-ning-en h熡d-el-ser in-te-res-sen-ter-ne f鷲g-en-de in-te-res-sen-ter in-te-res-sent-ana-ly-sen pro-blem-for-mu-le-ring pro-ble-mer pro-ble-ma-tisk kraft-y-del-ser vur-de-rer grebs-styr-ke da-ta-ana-ly-se sundheds-sektor u-sande grebs-styrke} 
+% \hyphenation{hvad hvem hvor MPa kon-se-kvens-klas-se bj熞-ken byg-ning-er e-le-ment brud-li-ni-er frem-l鷷s-tem-pe-ra-tur-en Bj熞-ker-ne ind-be-ret-tel-se be-hand-ler-en ana-ly-se stig-ning-en h熡d-el-ser in-te-res-sen-ter-ne f鷲g-en-de in-te-res-sen-ter in-te-res-sent-ana-ly-sen pro-blem-for-mu-le-ring pro-ble-mer pro-ble-ma-tisk kraft-y-del-ser vur-de-rer grebs-styr-ke da-ta-ana-ly-se sundheds-sektor u-sande grebs-styrke} 
