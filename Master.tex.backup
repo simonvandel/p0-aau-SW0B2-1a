@@ -4,20 +4,14 @@
 %preamble slut
 \begin{document}
 \includepdf{Frontpage.pdf}
-%\cleardoublepage
+\cleardoublepage
 %\clearpage
 %\cleardoublepage
 \input{Titlepage/TitlepageDa.tex} %synopsis
-
-\chapter{Abstract}
-\input{Titlepage/Abstract.tex}
-
-%\cleardoublepage
+\cleardoublepage
 %---------Preface---------------
-%\input{Chapters/Forord.tex}
-%\cleardoublepage
-\newpage
-
+\input{Chapters/Forord.tex}
+\cleardoublepage
 \tableofcontents
 
 %---------Introduction---------------
