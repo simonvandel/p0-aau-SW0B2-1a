@@ -6,7 +6,8 @@
 \usepackage[utf8]{inputenc}					% Gør det muligt at bruge æ, ø og å i sine .tex-filer
 \usepackage[english,danish]{babel}							% Dansk sporg, f.eks. tabel, figur og kapitel
 \usepackage[T1]{fontenc}								% Hjælper med orddeling ved æ, ø og å. Sætter fontene til at være ps-fonte, i stedet for bmp					
-\usepackage{latexsym}										% LaTeX symboler
+\usepackage{latexsym}			
+						% LaTeX symboler
 \usepackage{xcolor,ragged2e,fix-cm}			% Justering af elementer
 %\usepackage{pdfpages}										% Gør det muligt at inkludere pdf-dokumenter med kommandoen \includepdf[pages=]{fil.pdf}	
 %\pretolerance=2500 											% Gør det muligt at justre afstanden mellem ord (højt tal, mindre orddeling og mere space mellem ord)
@@ -35,6 +36,8 @@
 
 % ¤¤ Referencer, bibtex og url'er ¤¤ %
 \usepackage{url}
+
+
 
 \usepackage{lastpage} % support for sidste side page number
 
@@ -146,6 +149,13 @@
 }
 
 \chapterstyle{jenor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+   citecolor=red,
+   linkcolor=black
+}
+
 
 % % ¤¤ Fjerner den vertikale afstand mellem listeopstillinger og punktopstillinger ¤¤ %
 % \let\olditemize=\itemize							
