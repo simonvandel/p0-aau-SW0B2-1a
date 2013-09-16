@@ -8,6 +8,7 @@
 \usepackage[T1]{fontenc}								% Hjælper med orddeling ved æ, ø og å. Sætter fontene til at være ps-fonte, i stedet for bmp					
 \usepackage{latexsym}			
 						% LaTeX symboler
+            \usepackage{csquotes}
 \usepackage{xcolor,ragged2e,fix-cm}			% Justering af elementer
 %\usepackage{pdfpages}										% Gør det muligt at inkludere pdf-dokumenter med kommandoen \includepdf[pages=]{fil.pdf}	
 %\pretolerance=2500 											% Gør det muligt at justre afstanden mellem ord (højt tal, mindre orddeling og mere space mellem ord)
@@ -50,7 +51,7 @@
 \urlstyle{leo}
 
 \usepackage[danish]{varioref}						% Giver flere bedre mulighed for at lave krydshenvisninger
-\usepackage{natbib}											% Litteraturliste med forfatter-år og nummererede referencer
+%\usepackage{natbib}											% Litteraturliste med forfatter-år og nummererede referencer
 
 
 % ¤¤ Floats ¤¤ %
@@ -74,8 +75,8 @@
 \linespread{1,1}												% Linie afstand
 
 % ¤¤ Litteraturlisten ¤¤ %
-\bibpunct{[}{]}{,}{a}{}{;}					% Definerer de 6 parametre ved Harvard henvisning (bl.a. parantestype og seperatortegn)
-\bibliographystyle{chicago} 			% Udseende af litteraturlisten
+%\bibpunct{[}{]}{,}{a}{}{;}					% Definerer de 6 parametre ved Harvard henvisning (bl.a. parantestype og seperatortegn)
+%\bibliographystyle{chicago} 			% Udseende af litteraturlisten
 
 % ¤¤ Indholdsfortegnelse ¤¤ %
 \setsecnumdepth{subsubsection}		 			% Dybden af nummerede overkrifter (part/chapter/section/subsection)
@@ -149,47 +150,25 @@
 }
 
 \chapterstyle{jenor}
+
+
+
+\usepackage[
+    bibencoding=utf8,
+    hyperref=true,
+    backend=biber,
+    authordate
+]{biblatex-chicago}
+\bibliography{Bibtex/Kilder.bib}
+
+%\usepackage[authordate]{biblatex-chicago}
+
+
+
+
 \usepackage{hyperref}
 \hypersetup{
   colorlinks = true,
    citecolor=red,
    linkcolor=black
 }
-
-
-% % ¤¤ Fjerner den vertikale afstand mellem listeopstillinger og punktopstillinger ¤¤ %
-% \let\olditemize=\itemize							
-% \def\itemize{\olditemize\setlength{\itemsep}{-1ex}}
-% \let\oldenumerate=\enumerate						
-% \def\enumerate{\oldenumerate\setlength{\itemsep}{-1ex}}
-
-
-%%%% CUSTOM COMMANDS %%%%
-
-% % ¤¤ Billede hack ¤¤ %
-% \newcommand{\figur}[4]{
-% 		\begin{figure}[H] \centering
-% 			\includegraphics[width=#1\textwidth]{billeder/#2}
-% 			\caption{#3}\label{#4}
-% 		\end{figure}
-% }
-
-% % ¤¤ Specielle tegn ¤¤ %
-% \newcommand{\celcius}{^{\circ}C}
-% \newcommand{\gr}{^{\circ}}
-% \newcommand{\g}{\cdot}
-
-% % ¤¤ Promille-hack (\promille) ¤¤ %
-% \newcommand{\promille}{%
-%   \relax\ifmmode\promillezeichen
-%         \else\leavevmode\(\mathsurround=0pt\promillezeichen\)\fi}
-% \newcommand{\promillezeichen}{%
-%   \kern-.05em%
-%   \raise.5ex\hbox{\the\scriptfont0 0}%
-%   \kern-.15em/\kern-.15em%
-%   \lower.25ex\hbox{\the\scriptfont0 00}}
-
-
-% %%%% ORDDELING %%%%
-
-% \hyphenation{hvad hvem hvor MPa kon-se-kvens-klas-se bjæl-ken byg-ning-er e-le-ment brud-li-ni-er frem-løbs-tem-pe-ra-tur-en Bjæl-ker-ne ind-be-ret-tel-se be-hand-ler-en ana-ly-se stig-ning-en hænd-el-ser in-te-res-sen-ter-ne følg-en-de in-te-res-sen-ter in-te-res-sent-ana-ly-sen pro-blem-for-mu-le-ring pro-ble-mer pro-ble-ma-tisk kraft-y-del-ser vur-de-rer grebs-styr-ke da-ta-ana-ly-se sundheds-sektor u-sande grebs-styrke} 
