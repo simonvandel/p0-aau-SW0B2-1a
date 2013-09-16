@@ -11,7 +11,7 @@
 	\item Husk: er det ok at printe samme genstand flere gang, uden at betale flere gange?
 \end{itemize}
 
-På baggrund af de omtalte problemer ved de nuværende platforme, har vi tænkt på en mulig løsning. Vi har forsøgt at minimere muligheden for at kunne piratkopiere 3D-schematics. Derudover har vi forsøgt at gøre det nemt og tilgængeligt for ikke-tekniske forbrugere af 3D-printere. Vi målretter derfor vores problemløsning til en bredere målgruppe. Vi kalder idéen for \textbf{CloudSlicing}. 
+På baggrund af de omtalte problemer ved de nuværende platforme, er der fremlagt en mulig løsning. Der har forsøgt på at minimere muligheden for at kunne piratkopiere 3D-schematics. Derudover har vi forsøgt at gøre det nemt og tilgængeligt for ikke-tekniske forbrugere af 3D-printere. Vi målretter derfor vores problemløsning til en bredere målgruppe. Vi kalder idéen for \textbf{CloudSlicing}. 
 
 \section{CloudSlicing} % (fold)
 \label{sec:cloudslicing}
@@ -24,7 +24,6 @@ CloudSlicing er en online service der tilbyder en designer-til-forbruger platfor
 Det vil være muligt at tilgå servicen som en app og en hjemmeside.
 
 Features:
-
 \begin{itemize}
 	\item Søgefunktioner
 	\item Tilpasning af 3D-schematic (farver, kvalitet og størrelse)
@@ -43,12 +42,13 @@ For at mindske kæden af led i 3D-printning, skal 3D-printeren kunne kommunikere
 
 Printeren skal have en nem opsætning uden brug af en ekstern computer.
 
+::En uddybning af det overstående "nem opsætning"::
 % subsection krav_til_3d_teknologien (end)
 
 \subsection{Hvad løser det?} % (fold)
 \label{sub:hvad_l_ser_det_}
 
-Som diskuteret tidligere i denne rapport, skal man bruge et 3D-schematic for at printe et objekt. I stedet for at 3D-schematics bliver slicet lokalt på brugerens computer, slicer vores service denne 3D-schematic i skyen, for derefter at sende G-koden direkte til 3D-printeren. 
+Som diskuteret tidligere i denne rapport, skal man bruge et 3D-schematic for at printe et objekt. I stedet for at 3D-schematics bliver slicet lokalt på brugerens computer, slicer vores service denne 3D-schematic i en sky som bliver hostet af vores server, for derefter at sende G-koden direkte til 3D-printeren. 
 
 Ved at sende G-koden direkte til 3D-printeren, er det ikke en nødvendighed for brugeren at slice 3D-schematics selv. Dette gør muligt at introducere en ``plug-and-print'' funktion, hvilket betyder at brugeren bare skal tænde printeren, etablere internetforbindelse og logge ind med en oprettet CloudSlicing-konto på printeren. 3D-printeren er nu tilsluttet vores service, og er nu klar til at modtage G-koder.
 
