@@ -1,3 +1,4 @@
+%!TEX root = ../Master.tex
 \lstset{ %
 language=C++,                % choose the language of the code
 basicstyle=\footnotesize,       % the size of the fonts that are used for the code
@@ -17,15 +18,16 @@ breakatwhitespace=false,    % sets if automatic breaks should only happen at whi
 escapeinside={\%*}{*)}          % if you want to add a comment within your code
 }
 
-\textbf{STL}
-Inden for 3D-modeller findes der utallige filtyper, næsten alle CAD programmer har deres egen. Men skulle man tale om en standart for 3D-modeller, så er STL Den mest universelle filtype. Det er også den mest almindelige indenfor distribuering af modeller til 3D-printning. \cite{makerbot}
-Stl filtypen bruges til at gemme informationer om et fysisk 3D-objekter. Stl indeholder kun oplysninger om modellens ydre opbygning, og kan derfor ikke indeholde informationer så som modellens farver. 
-Stl filer kan være skrevet i ASCII format. 
+\paragraph{STL} % (fold)
+
+Inden for 3D-modeller findes der utallige filtyper, næsten alle CAD programmer har deres egen. Men skulle man tale om en standart for 3D-modeller, så er STL den mest universelle filtype. Det er også den mest almindelige indenfor distribuering af modeller til 3D-printning. \cite{makerbot}
+STL filtypen bruges til at gemme informationer om et fysisk 3D-objekter. STL indeholder kun oplysninger om modellens ydre opbygning, og kan derfor ikke indeholde informationer så som modellens farver. 
+STL filer kan være skrevet i ASCII format. 
 En sådan fil er bygget op af tredimensionelle trekanter. 
-Hver trekant er beskrevet ved brug af 3 koordinatsæt som er trekantens hjørner, og en retnings vektor til at beskrive hvordan trekanten vender. 
-Som nævnt tidligere beskriver en stl kun modellens omrids, og derfor gør er retnings vektoren af vigtig betydning, og beskriver hvordan trekanten vender. \cite{stl}
-Hver trekant er beskrives ved brug af normalvektoren og 3 punkter, (X,Y,Z) som udgør trekantens hjørnepunkter. Normalvektoren består også af 3 koordinater (X,Y,Z). Alle punkter skal skrives som Floating points\cite{stl}.
-En trekan kaldes for en facet, og skal opstille på følgende måde:
+Hver trekant er beskrevet ved brug af 3 koordinatsæt som er trekantens hjørner, og en retningsvektor til at beskrive hvordan trekanten vender. 
+Som nævnt tidligere beskriver en STL kun modellens omrids, og derfor er retningsvektoren af vigtig betydning, og beskriver hvordan trekanten vender. \cite{stl}
+Hver trekant beskrives ved brug af normalvektoren og 3 punkter, (X,Y,Z) som udgør trekantens hjørnepunkter. Normalvektoren består også af 3 koordinater (X,Y,Z). Alle punkter skal skrives som Floating points\cite{stl}.
+En trekant kaldes for en facet, og skal opstille på følgende måde:
 \begin{lstlisting}
           facet normal Nx Ny Nz
             outer loop
@@ -36,7 +38,7 @@ En trekan kaldes for en facet, og skal opstille på følgende måde:
           endfacet
 \end{lstlisting}
 Facet normal betyder begynd trekant med normal vektor med koordinaterne Nx, Ny, Nz. Outer loop starter indramning af de 3 koordinater til trekantens hjørnepunkter. Hver hjørnepunkt beskrives på følgende måde vertex X Y Z. Punkterne afsluttes med endfacet, efterfulgt af endloop for at afslutte trekanten. 
-For at definerer hvor filen starter og slutter bruges syntaksen solid "navn" til start af 3D-model, og endsolid til afslutning af 3D-modellen.
+For at definerer hvor filen starter og slutter, bruges syntaksen solid "navn" til start af 3D-model, og endsolid til afslutning af 3D-modellen.
 \newpage
 Eksempel på en 3D-model. (Simpel firkant) \cite{Stl_Eksempel}
 \begin{lstlisting}
@@ -71,9 +73,4 @@ Eksempel på en 3D-model. (Simpel firkant) \cite{Stl_Eksempel}
           endfacet
         endsolid
 \end{lstlisting}
-De to eneste store problemer ved stl filtypen, er at der igen mulighed for rettigheds beskyttelse er. Samt at der ikke er nogen mulighed for at tilføje farver til modellen.
-
-
-
-%    \bibliographystyle{plainnat}
-%    \bibliography{Kilder}
+De to eneste store problemer ved STL filtypen er, at der ingen mulighed for rettighedsbeskyttelse er. Samt at der ikke er nogen mulighed for at tilføje farver til modellen.
