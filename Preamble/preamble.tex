@@ -11,27 +11,11 @@
 						% LaTeX symboler
             \usepackage{csquotes}
 \usepackage{xcolor,ragged2e,fix-cm}			% Justering af elementer
-%\usepackage{pdfpages}										% Gør det muligt at inkludere pdf-dokumenter med kommandoen \includepdf[pages=]{fil.pdf}	
-%\pretolerance=2500 											% Gør det muligt at justre afstanden mellem ord (højt tal, mindre orddeling og mere space mellem ord)
-%\usepackage{ulem}                       % Gennemstregning af ord med koden \sout{}
-																			
-% ¤¤ Figurer og tabeller – floats  ¤¤ %
-%\usepackage{flafter}										% Sørger for at dine floats ikke optræder i teksten før de er sat ind.
-%\usepackage{multirow}                		% Fletning af rækker
-%\usepackage{hhline}                   	% Dobbelte horisontale linier
-%\usepackage{multicol}         	        % Fletning af kolonner
-%\usepackage{colortbl} 									% Muligøre farver i tabeller
-%\usepackage{here}												% Gør det muligt at placere figurer hvor du vil.   \begin{figure}[!h] % Will not be floating.
-%\usepackage{wrapfig}										% Indsættelse af figurer omsvøbt af tekst. \begin{wrapfigure}{Placering}{Størrelse}
-%\usepackage{floatflt}										% Indsættelse af tabeller omsvøbt af tekst.
-%\pdfoptionpdfminorversion=6							% Muliggør inkludering af pdf dokumenter, af version 1.6 og højere
-%\usepackage{placeins}	
+
 % ¤¤ Matematiske formler og maskinkode ¤¤
 \usepackage{amsmath,amssymb,stmaryrd} 	% Bedre matematik og ekstra fonte
 %\usepackage{textcomp}                 	% Adgang til tekstsymboler
 \usepackage{mathtools}									% Udvidelse af amsmath-pakken.
-%\usepackage{eso-pic}										% Tilføj billedekommandoer på hver side
-%\usepackage{lipsum}											% Dummy text \lipsum[..]
 
 % ¤¤ PDF og billede optimering ¤¤ %
 \usepackage{graphicx} 									% Pakke til jpeg/png billeder
@@ -52,12 +36,10 @@
 \urlstyle{leo}
 
 \usepackage[danish]{varioref}						% Giver flere bedre mulighed for at lave krydshenvisninger
-%\usepackage{natbib}											% Litteraturliste med forfatter-år og nummererede referencer
 
 
-% ¤¤ Floats ¤¤ %
-\let\newfloat\relax 										% Memoir har allerede defineret denne men det gør float pakken også
-\usepackage{float}
+
+
 
 \usepackage[marginclue,inline,draft,danish,silent]{fixme}			
 
@@ -75,26 +57,10 @@
 \setlength{\parskip}{3mm}          			% Afstand mellem afsnit ved brug af double Enter
 \linespread{1,1}												% Linie afstand
 
-% ¤¤ Litteraturlisten ¤¤ %
-%\bibpunct{[}{]}{,}{a}{}{;}					% Definerer de 6 parametre ved Harvard henvisning (bl.a. parantestype og seperatortegn)
-%\bibliographystyle{chicago} 			% Udseende af litteraturlisten
-
 % ¤¤ Indholdsfortegnelse ¤¤ %
 \setsecnumdepth{subsubsection}		 			% Dybden af nummerede overkrifter (part/chapter/section/subsection)
 \maxsecnumdepth{subsubsection}					% Ændring af dokumentklassens grænse for nummereringsdybde
 \settocdepth{subsection} 								% Dybden af indholdsfortegnelsen
-
-% ¤¤ Visuelle referencer ¤¤ %
-% \usepackage[colorlinks]{hyperref}			 	% Giver mulighed for at ens referencer bliver til klikbare hyperlinks. .. [colorlinks]{..}
-% \hypersetup{pdfborder = 0}							% Fjerner ramme omkring links i fx indholsfotegnelsen og ved kildehenvisninger ¤¤
-% \hypersetup{														%	Opsætning af hyperlinks
-%     colorlinks = false,
-%     linkcolor = black,
-%     anchorcolor = black,
-%     citecolor = black
-% }
-
-% \definecolor{gray}{gray}{0.80}					% Definerer farven grå
 
 % ¤¤ Opsætning af figur- og tabeltekst ¤¤ %
  	\captionnamefont{
@@ -107,17 +73,6 @@
 
 % ¤¤ Sidehoved ¤¤ %
 \pagestyle{plain}
-		
-% ¤¤ Navngivning ¤¤ %
-\addto\captionsdanish{
-	\renewcommand\appendixname{Bilag}
-	\renewcommand\contentsname{Indholdsfortegnelse}	
-	\renewcommand\appendixpagename{Bilag}
-	\renewcommand\cftchaptername{\chaptername~}
-	\renewcommand\cftappendixname{\appendixname~}
-	\renewcommand\appendixtocname{Bilag}
-}
-%Appendix opsætning. Toc er sætter appendix kapitlerne i indholdfortegnelsen og head sætter en overskrift til appendix kapitlet
 
 \usepackage{appendix}
 %\usepackage[toc,page]{appendix}
@@ -153,18 +108,12 @@
 \chapterstyle{jenor}
 
 
-
 \usepackage[
     bibencoding=utf8,
     hyperref=true,
     backend=biber
 ]{biblatex}
 \bibliography{Bibtex/Kilder.bib}
-
-%\usepackage[authordate]{biblatex-chicago}
-
-
-
 
 \usepackage{hyperref}
 \hypersetup{
