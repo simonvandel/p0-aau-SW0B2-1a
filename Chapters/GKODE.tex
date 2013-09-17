@@ -1,0 +1,35 @@
+\lstset{ %
+language=C++,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,           % adds a frame around the code
+tabsize=2,          % sets default tabsize to 2 spaces
+captionpos=b,           % sets the caption-position to bottom
+breaklines=true,        % sets automatic line breaking
+breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+\textbf{G-koder}
+G-koder er et sprog som CNC maskiner som fræsere, og 3D-printer benytter sig af. DeT er instrukser som beskriver en rute, som boret eller printerhovedet bevæge sig i\cite{gkode}. 
+Der findes flere hundrede forskellige G-koder funktioner, men en til 3D-printning, benyttes kun en funktion. Den en funktion som printeren bruger heder G1. G1 fortæller printerne at den skal bevæge printerhovedet i en lineær strækning fra, den nuværende position til Det angivende koordinat, efter G1.
+Så en typisk G-kode kunne se ud som følgende: \newline
+G1 X0 Y0 Z20 E0
+\newline
+Denne kode fortæller printeren at den skal køre til følgende koordinat (X, Y, Z): 0,0,20, hvor E er mængden af tråd der samtidighed skal presse ud gennem dysen.
+En parameter mere kan tilføjes til G-koden, F som beskriver hvilken hastighed som rute skal køres med. Er der ikke angivet en hastighed bruges samme hastighed som den tidligere kørte rute. 
+Hver G-kode adskilles ved brug af White spacing.
+Et Eksempel på G-Koder: (En simpel firkant):
+\begin{lstlisting}
+G1 F200 X0 Y0 Z0 E0
+G1 F200 X100 Y0 Z0 E100
+G1 F200 X100 Y100 Z0 E100
+G1 F200 X0 Y100 Z0 E100
+G1 F200 0 0 Z0 E100
+\end{lstlisting}
