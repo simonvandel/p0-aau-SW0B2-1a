@@ -19,20 +19,20 @@ escapeinside={\%*}{*)}          % if you want to add a comment within your code
 }
 
 \paragraph{G-koder} % (fold)
-
-G-koder er et sprog som CNC maskiner som fræsere og 3D-printer benytter sig af. Det er instrukser som beskriver en rute, som boret eller printerhovedet bevæger sig i. \cite{gkode} 
-Der findes flere hundrede forskellige G-koder funktioner, men til 3D-printning, benyttes kun en funktion. Denne funktion som printeren bruger hedder G1. G1 fortæller printerne at den skal bevæge printerhovedet i en lineær strækning fra den nuværende position, til det angivede koordinat, efter G1.
-Så en typisk G-kode kunne se ud som følgende: 
+\\
+G-koder er et sprog som CNC maskiner(f.eks fræsere) og 3D-printer benytter sig af. Det er instrukser som beskriver en rute, som boret eller printerhovedet bevæger sig i. \cite{gkode} 
+Der findes flere hundrede forskellige G-kode funktioner, men til 3D-printning benyttes kun én funktion. Den funktion som printeren bruger hedder G1. G1 fortæller printeren, at den skal bevæge printerhovedet i en lineær strækning fra den nuværende position, til det givne koordinat.
+En typisk G-kode kunne se ud som følgende: 
 
 \begin{verbatim}
 	G1 X0 Y0 Z20 E0
 \end{verbatim}
 
 
-Denne kode fortæller printeren at den skal køre til følgende koordinat (X, Y, Z): 0,0,20, hvor E er mængden af tråd der samtidig skal presse ud gennem dysen.
-En parameter mere kan tilføjes til G-koden, F, som beskriver hvilken hastighed ruten skal køres med. Er der ikke angivet en hastighed bruges samme hastighed som den tidligere kørte rute. 
+Denne kode fortæller printeren, at den skal køre til følgende koordinat: "(X, Y, Z) 0,0,20", hvor E-koefficienten er mængden af tråd, der samtidig skal føres ud gennem dysen.
+En parameter mere kan tilføjes til G-koden, F-koefficient, som bestemmer med hvilken hastighed ruten skal følges. Er der ikke angivet en hastighed, bruges samme hastighed som den tidligere rute. 
 Hver G-kode adskilles ved brug af white spacing.
-Et eksempel på G-koder: (En simpel firkant):
+Et eksempel på G-koder(en simpel firkant):
 \begin{lstlisting}
 G1 F200 X0 Y0 Z0 E0
 G1 F200 X100 Y0 Z0 E100
