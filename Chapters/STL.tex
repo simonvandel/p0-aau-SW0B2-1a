@@ -19,7 +19,7 @@ escapeinside={\%*}{*)}          % if you want to add a comment within your code
 }
 
 \paragraph{STL} % (fold)
-
+\newline
 Indenfor 3D-modeller findes der utallige filtyper, næsten alle CAD-programmer har deres egen. Men skulle man tale om en standart for 3D-modeller, så er STL den mest universelle filtype. Det er også den mest almindelige indenfor distribuering af modeller til 3D-printning. \autocite{makerbot}
 STL filtypen bruges til at gemme informationer om et fysisk 3D-objekt. STL indeholder kun oplysninger om modellens omrids, og kan derfor ikke indeholde informationer såsom modellens farver. 
 STL filer kan være skrevet i ASCII format. 
@@ -35,7 +35,7 @@ En trekant kaldes for en facet, og skal opstille på følgende måde:
             endloop
           endfacet
 \end{lstlisting}
-\newpage
+\newline
 Facet normal betyder: "begynd trekant og normalvektor med koordinaterne: Nx, Ny, Nz." Outer loop starter indramning af de 3 koordinater til trekantens hjørnepunkter. Hver hjørnepunkt beskrives på følgende måde: "vertex X Y Z". Punkterne afsluttes med endfacet, efterfulgt af endloop, for at afslutte trekanten. 
 For at definere hvor filen starter og slutter, bruges syntaksen solid "navn"  til start af 3D-model, og endsolid til afslutning af 3D-modellen.
 Eksempel på en 3D-model(Simpel firkant)\autocite{Stl_Eksempel}.
